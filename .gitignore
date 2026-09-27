@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-pages
+.grok
+screenshots
+artifacts
+.DS_Store
+*.log
+.env
+.env.*

@@ -2,6 +2,8 @@
 
 A fullscreen study instrument for valence electron shells, orbital probability fields, and the polyhedra atoms actually use.
 
+Live site: [dougbutner.github.io/valence-shells](https://dougbutner.github.io/valence-shells/)
+
 Companion to the [7-11-12 model](https://github.com/dougbutner/universal-consciousness). The grids lesson pictures the human collective as a tetrahedron, Earth as a cube that contains the merkaba, and the Sun as an octahedron. This instrument sets those same solids next to the shells and molecules where the geometry is measured.
 
 ## What you can do
@@ -14,3 +16,7 @@ Companion to the [7-11-12 model](https://github.com/dougbutner/universal-conscio
 - **Cage** draws the polyhedron around a molecule.
 
 A shell here is an isosurface idea, |ψ|², not a track an electron runs on.
+
+## GitHub Pages
+
+Pushes to `main` build a static client bundle (`npm run build:pages`) and deploy it with GitHub Actions. The site is served from `/valence-shells/`.

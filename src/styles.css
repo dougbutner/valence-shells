@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #08090c;
+  --color-surface: #14161c;
+  --color-fg: #ebe6dc;
+  --color-muted: #9a9386;
+  --color-gold: #e0b15a;
+  --color-tide: #6f9e96;
+  --color-line: #2c2e36;
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    background: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+  sub,
+  sup {
+    font-size: 0.65em;
+    line-height: 0;
+  }
+}
+
+.stage-canvas {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+}
+
+.scrim-top {
+  height: 8rem;
+  background: linear-gradient(to bottom, var(--color-ink), transparent);
+}
+
+.scrim-bottom {
+  height: 18rem;
+  background: linear-gradient(to top, var(--color-ink) 18%, transparent);
+}
+
+.filmstrip {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filmstrip::-webkit-scrollbar {
+  display: none;
+}
+
+.sheet-scroll {
+  max-height: 24dvh;
+  overflow: auto;
+}
+
+.safe-top {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+
+.safe-bot {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.safe-x {
+  padding-right: max(0.75rem, env(safe-area-inset-right));
+  padding-left: max(0.75rem, env(safe-area-inset-left));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filmstrip {
+    scroll-behavior: auto;
+  }
+}
